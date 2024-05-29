@@ -24,7 +24,7 @@ export default function Wishes() {
       ) : (
         <View style={cls.like_w}>
           <Image
-            source={require("@/assets/images/like2.png")}
+            source={require("@/assets/images/assets_images_like2.png")}
             style={cls.like_img}
           />
           <Text style={cls.like_h2}>Sevimli mahsulotlar yo'q</Text>

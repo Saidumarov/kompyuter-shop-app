@@ -58,7 +58,7 @@ export default function Cart() {
       ) : (
         <View style={styles.cart_w_not}>
           <Image
-            source={require("@/assets/images/cart.png")}
+            source={require("@/assets/images/assets_images_cart.png")}
             style={styles.cart_img}
           />
           <Text style={styles.cart_h2}>Savatda hozircha mahsulot yo'q.</Text>
