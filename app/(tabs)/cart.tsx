@@ -1,6 +1,5 @@
 import {
   Dimensions,
-  Image,
   StyleSheet,
   TouchableOpacity,
   Text,
@@ -15,7 +14,7 @@ import { CartComponent } from "@/components/card";
 import { useEffect, useState } from "react";
 import { NumberFormat } from "@/hooks";
 import { useRouter } from "expo-router";
-import { Feather } from "@expo/vector-icons";
+import NotfoundCard from "@/components/shared/not-found";
 
 const { height } = Dimensions.get("window");
 export default function Cart() {
@@ -56,18 +55,7 @@ export default function Cart() {
           </View>
         </>
       ) : (
-        <View style={styles.cart_w_not}>
-          <Image
-            source={require("@/assets/images/cart.png")}
-            style={styles.cart_img}
-          />
-          <Text style={styles.cart_h2}>Savatda hozircha mahsulot yo'q.</Text>
-          <Text style={styles.cart_p}>
-            Mahsulotdagi{" "}
-            <Feather name="shopping-cart" style={styles.cartIcon} /> belgisi
-            bilan qo'shing️
-          </Text>
-        </View>
+        <NotfoundCard />
       )}
     </>
   );
@@ -125,32 +113,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     color: "black",
-  },
-  cart_h2: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginTop: 10,
-  },
-  cart_p: {
-    fontSize: 16,
-    marginTop: 10,
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  cart_w_not: {
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff",
-  },
-  cart_img: {
-    width: 130,
-    height: 130,
-    resizeMode: "contain",
-  },
-  cartIcon: {
-    fontSize: 20,
-    color: "rgb(130, 0, 211)",
   },
 });

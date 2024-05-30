@@ -1,7 +1,7 @@
 import { ProductCard } from "@/components/card/card";
+import { NotfoundLike } from "@/components/shared/not-found";
 import useLikeStore from "@/zustand/likes";
-import { AntDesign } from "@expo/vector-icons";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import {
   GestureHandlerRootView,
   ScrollView,
@@ -22,17 +22,7 @@ export default function Wishes() {
           </ScrollView>
         </GestureHandlerRootView>
       ) : (
-        <View style={cls.like_w}>
-          <Image
-            source={require("@/assets/images/liki.png")}
-            style={cls.like_img}
-          />
-          <Text style={cls.like_h2}>Sevimli mahsulotlar yo'q</Text>
-          <Text style={cls.like_p}>
-            Mahsulotdagi <AntDesign name="heart" style={cls.heart} /> belgisi
-            bilan qo'shing️
-          </Text>
-        </View>
+        <NotfoundLike />
       )}
     </>
   );
@@ -56,33 +46,5 @@ const cls = StyleSheet.create({
     justifyContent: "space-between",
     marginLeft: "auto",
     marginRight: "auto",
-  },
-  heart: {
-    fontSize: 17,
-    color: "red",
-    marginTop: 10,
-  },
-  like_h2: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginTop: 10,
-  },
-  like_p: {
-    fontSize: 16,
-    marginTop: 10,
-    marginBottom: 10,
-    textAlign: "center",
-  },
-  like_img: {
-    width: 130,
-    height: 130,
-    resizeMode: "contain",
-  },
-  like_w: {
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff",
   },
 });
