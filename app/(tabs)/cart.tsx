@@ -57,10 +57,10 @@ export default function Cart() {
         </>
       ) : (
         <View style={styles.cart_w_not}>
-          {/* <Image
+          <Image
             source={require("@/assets/images/cart.png")}
             style={styles.cart_img}
-          /> */}
+          />
           <Text style={styles.cart_h2}>Savatda hozircha mahsulot yo'q.</Text>
           <Text style={styles.cart_p}>
             Mahsulotdagi{" "}

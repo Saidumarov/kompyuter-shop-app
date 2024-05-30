@@ -5,6 +5,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 
 import {
