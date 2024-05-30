@@ -10,7 +10,6 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { useColorScheme } from "@/hooks/useHooks/useColorScheme";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export {
   // Catch any errors thrown by the Layout component.

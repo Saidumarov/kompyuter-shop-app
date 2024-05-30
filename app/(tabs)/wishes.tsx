@@ -23,10 +23,10 @@ export default function Wishes() {
         </GestureHandlerRootView>
       ) : (
         <View style={cls.like_w}>
-          <Image
-            source={require("@/assets/images/assets_images_like2.png")}
+          {/* <Image
+            source={require("@/assets/images/liki.png")}
             style={cls.like_img}
-          />
+          /> */}
           <Text style={cls.like_h2}>Sevimli mahsulotlar yo'q</Text>
           <Text style={cls.like_p}>
             Mahsulotdagi <AntDesign name="heart" style={cls.heart} /> belgisi
